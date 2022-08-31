@@ -4,22 +4,27 @@
 
 .nav {
 
-
-    &__list {
-        
-        .header & {
-            // *
-
-
-            
-
-        }
-    }
-
     &__head {
         display: flex;
         justify-content: space-between;
         padding: 10px 0;
+
+        &--xs-hidden {
+            display: none;
+        }
+
+        &--xl-visible {
+            @media screen and (min-width: 1366px) {
+                display: flex;
+            }
+        }
+    }
+
+    &__link {
+        flex: 0 0 auto;
+        line-height: 20px;
+        font-weight: 600;
+        color: #121212;
     }
 
     &__button {
@@ -34,13 +39,6 @@
         border-radius: 0;
         box-shadow: none;
         background: #F3F7FA;
-        cursor: pointer;
-
-        &--m-hidden {
-            @media screen and (min-width: 768px) {
-                display: none;
-            }
-        }
     }
 
     &__icon {
@@ -57,15 +55,18 @@
 
         .nav__button--active & {
             transform: translate(-50%,-50%) rotate(-180deg);
-        }
-    }
 
-    &__link {
-        flex: 0 0 auto;
-        display: block;
-        line-height: 20px;
-        font-weight: 600;
-        color: #1a1a1a;
+            @media screen and (min-width: 1366px) {
+                transform: translate(-50%,-50%);
+            }
+        }
+
+        .nav__head:hover & {
+            @media screen and (min-width: 1366px) {
+                transform: translate(-50%,-50%) rotate(-180deg);
+            }
+        }
+
     }
 
     &__body {
@@ -75,17 +76,129 @@
             display: block;
         }
 
-        &--m-visible {
-            @media screen and (min-width: 768px) {
-                display: block;
+        &--xs-visible {
+            display: block;
+        }
+
+        &--xl-hidden {
+            @media screen and (min-width: 1366px) {
+                display: none;
             }
         }
     }
-
-    &__sub-link {
-        display: block;
-        padding: 5px 0;
-        line-height: 20px;
-        color: #363636;
-    }
 }
+
+
+
+// .nav__item {
+//     position: relative;
+// }
+
+// .nav > .nav__list > .nav__item:hover > .nav__body {
+//     display: block;
+//     position: absolute;
+//     z-index: 1;
+//     background: #fff;
+//     width: 400px;
+//     border: 1px solid #000;
+// }
+
+// .nav > .nav__list > .nav__item > .nav__body > .nav__list > .nav__item:hover > .nav__body {
+//     display: block;
+//     position: absolute;
+//     z-index: 1;
+//     background: #fff;
+//     left: 100%;
+//     top: 0; 
+//     width: 200px;
+//     border: 1px solid #000;
+// }
+
+// .nav {
+
+
+//     &__list {
+        
+//     }
+
+//     &__head {
+//         display: flex;
+//         justify-content: space-between;
+//         padding: 10px 0;
+//     }
+
+//     &__button {
+//         flex: 0 0 auto;
+//         position: relative;
+//         display: block;
+//         width: 20px;
+//         height: 20px;
+//         margin: 0 0 0 10px;
+//         padding: 0;
+//         border: 0;
+//         border-radius: 0;
+//         box-shadow: none;
+//         background: #F3F7FA;
+//         cursor: pointer;
+
+//         &--m-hidden {
+//             @media screen and (min-width: 768px) {
+//                 display: none;
+//             }
+//         }
+//     }
+
+//     &__icon {
+//         position: absolute;
+//         left: 50%;
+//         top: 50%;
+//         transform: translate(-50%,-50%);
+//         display: block;
+//         width: 12px;
+//         height: 8px;
+//         fill: none;
+//         stroke:#3166B4;
+//         transition: transform .2s;
+
+//         .nav__button--active & {
+//             transform: translate(-50%,-50%) rotate(-180deg);
+//         }
+//     }
+
+//     &__link {
+//         flex: 0 0 auto;
+//         display: block;
+//         line-height: 20px;
+//         font-weight: 600;
+//         color: #1a1a1a;
+//     }
+
+//     &__body {
+//         display: none;
+
+//         &--active {
+//             display: block;
+//         }
+
+//         &--m-visible {
+//             @media screen and (min-width: 768px) {
+//                 display: block;
+//             }
+//         }
+//     }
+
+//     &__sub-link {
+//         display: block;
+//         padding: 5px 0;
+//         line-height: 20px;
+//         color: #363636;
+//     }
+// }
+
+.footer {
+    display: none;
+}
+
+
+
+
