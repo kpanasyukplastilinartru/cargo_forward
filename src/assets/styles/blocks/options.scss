@@ -1,0 +1,135 @@
+// options.scss
+
+// Options
+
+.options {
+
+    &__option {
+        display: flex;
+        width: 100%;
+        padding: 12px 6px;
+        border: 1px solid #3166B4;
+        border-radius: 0;
+        box-shadow: none;
+        line-height: 18px;
+        cursor: pointer;
+
+        @media screen and (min-width: 1366px) {
+            width: 86px;
+            height: 50%;
+            padding: 0;
+            position: relative;
+            border: 1px solid #E5E5E5;
+        }
+
+        &:not(:first-child) {
+            margin-top: 10px;
+
+            @media screen and (min-width: 1366px) {
+                margin: 0;
+            }
+        }
+
+        &--regular {
+            background: #3166B4;
+            color: #FFF;
+            
+            @media screen and (min-width: 1366px) {
+                background: #FFF;
+                color: #3166B4;
+            }
+        }
+
+        &--special {
+            background: #FFF;
+            color: #3166B4;
+        }
+
+        @media screen and (min-width: 1366px) {
+            transition: border-color .2s, background-color .2s, color .2s;
+        }
+
+        &:active {
+            background: #004486;
+            border-color: #004486;
+            color: #FFF;
+        }
+
+    }
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        @media screen and (min-width: 1366px) {
+            white-space: nowrap;
+            width: auto;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%) rotate(-90deg);
+        }
+    }
+
+    &__icon {
+        flex: 0 0 auto;
+        display: block;
+        margin-right: 10px;
+
+        @media (min-width: 1366px) and (max-height: 575px) {
+            margin: 0;
+        }
+
+        &--calculator {
+            width: 16px;
+            height: 22px;
+            fill: none;
+            stroke: #FFF;
+            stroke-width: 1;
+
+            @media screen and (min-width: 1366px) {
+                stroke: #3166B4;
+            }
+
+            .options__option:active & {
+                @media screen and (min-width: 1366px) {
+                    stroke: #FFF;
+                }
+            }
+        }
+
+        &--document {
+            width: 18px;
+            height: 22px;
+            stroke: #3166B4;
+            fill: #3166B4;
+            stroke-width: 1;
+
+            .options__option:active & {
+                stroke: #FFF;
+                fill: #FFF;
+            }
+        }
+    }
+
+    &__text {
+        @media (min-width: 1366px) and (max-height: 575px) {
+            display: none;
+        }
+
+        @media screen and (min-width: 1366px) {
+            color: #121212;
+        }
+
+        .options__option:active & {
+            @media screen and (min-width: 1366px) {
+                color: #FFF;
+            }
+    
+        }
+    }
+}

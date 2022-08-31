@@ -1,0 +1,26 @@
+// info-list.scss
+
+// Info List
+
+.info-list {
+
+    @media screen and (min-width: 1366px) {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+
+        @media screen and (min-width: 1366px) {
+            flex: 0 0 auto;
+        }
+
+        &:not(:first-child) {
+            margin-top: 10px;
+
+            @media screen and (min-width: 1366px) {
+                margin: 0 0 0 30px;
+            }
+        }
+    }
+}

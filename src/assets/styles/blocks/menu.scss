@@ -1,0 +1,330 @@
+// menu.scss
+
+// Menu
+
+.menu {
+
+    &__button {
+        position: relative;
+        z-index: 4;
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: #FFF;
+        cursor: pointer;
+
+        @media screen and (min-width: 768px) {
+            z-index: auto;
+        }
+
+        @media screen and (min-width: 1366px) {
+            display: none;
+        }
+
+        &--open {
+            display: block;
+        }
+
+        &--close {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: block;
+            }
+        }
+
+        &-box {
+            position: absolute;
+            display: block;
+            width: 22px;
+            height: 18px;
+            left: 50%;
+            top: 50%;
+
+            .menu__button--open & {
+                transform: translate(-50%, -50%);
+
+                @media screen and (min-width: 768px) {
+                    transition: transform .2s .6s;
+                }
+            }
+
+            .menu__button--open.menu__button--active & {
+                @media screen and (min-width: 768px) {
+                    transform: translate(-50%, -50%) scale(0);
+                    transition: transform .2s;
+                }
+            }
+
+            .menu__button--close & {
+                @media screen and (min-width: 768px) {
+                    transform: translate(-50%, -50%) scale(0);
+                    transition: transform .2s;
+                }
+            }
+
+            .menu__button--close.menu__button--active & {
+                @media screen and (min-width: 768px) {
+                    transform: translate(-50%, -50%);
+                    transition: transform .2s .6s;
+                }
+            }
+        }
+
+        &-box::before,
+        &-box::after {
+            content: ' ';
+        }
+ 
+        &-box::before,
+        &-line,
+        &-box::after {
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 2px;
+            border-radius: 1px;
+            background: #29A1F4;
+        }
+
+        &-box::before {
+            top: 0;
+
+            .menu__button--open & {
+                @media screen and (max-width: 767px) {
+                    transition: transform .2s, all .2s .2s;
+                }
+            }
+
+            .menu__button--open.menu__button--active & {
+                @media screen and (max-width: 767px) {
+                    top: 50%;
+                    margin-top: -1px;
+                    transform: rotate(45deg);
+                    transition: all .2s, transform .2s .2s;
+                }
+            }
+
+            .menu__button--close & {
+                @media screen and (min-width: 768px) {
+                    top: 50%;
+                    margin-top: -1px;
+                    transform: rotate(45deg);
+                }
+            }
+
+        }
+
+        &-line {
+            top: 50%;
+            margin-top: -1px;
+
+            .menu__button--open & {
+                @media screen and (max-width: 767px) {
+                    transition: transform 0s .2s;
+                }
+            }
+
+            .menu__button--open.menu__button--active & {
+                @media screen and (max-width: 767px) {
+                    transform: scale(0);
+                }
+            }
+
+            .menu__button--close & {
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+
+        &-box::after {
+            bottom: 0;
+
+            .menu__button--open & {
+                @media screen and (max-width: 767px) {
+                    transition: transform .2s, all .2s .2s;
+                }
+            }
+
+            .menu__button--open.menu__button--active & {
+                @media screen and (max-width: 767px) {
+                    bottom: 50%;
+                    margin-bottom: -1px;
+                    transform: rotate(-45deg);
+                    transition: all .2s, transform .2s .2s;
+                }
+            }
+
+            .menu__button--close & {
+                @media screen and (min-width: 768px) {
+                    bottom: 50%;
+                    margin-bottom: -1px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &__block {
+        position: fixed;
+        overflow: auto;
+        left: 0;
+        top: -100%;
+        opacity: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        transition: all 0s .2s, opacity .2s;
+
+        @media screen and (min-width: 768px) {
+            z-index: 1;
+            transition: all 0s .6s, background-color .2s .4s linear;
+        }
+
+        &--active {
+            top: 0;
+            opacity: 1;
+            transition: all 0s, opacity .2s;
+
+            @media screen and (min-width: 768px) {
+                background: rgba(0, 0, 0, .5);
+                transition: all 0s, background-color .2s .2s linear;
+            }
+        }
+
+        // *
+
+        @media screen and (min-width: 1366px) {
+            position: static;
+            overflow: visible;
+            top: 0;
+            opacity: 1;
+            z-index: auto;
+            width: auto;
+            height: auto;
+            background: none;
+            transition: all 0s;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        padding: 50px 20px 30px;
+        background: #FFF;
+
+        @media screen and (min-width: 768px) {
+            left: -388px;
+            width: 388px;
+            padding: 0;
+            transition: all .2s .2s linear;
+        }
+
+        .menu__block--active & {
+            @media screen and (min-width: 768px) {
+                left: 0;
+                transition: all .2s .4s linear;
+            }
+        }
+
+        // *
+        @media screen and (min-width: 1366px) {
+            position: static;
+            display: flex;
+            min-height: 0;
+            padding: 0;
+            background: none;
+            width: auto;
+            transition: all 0s;
+        }
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width: 678px) {
+            padding: 0 6px 0 20px;
+        }
+
+        // *
+        @media screen and (min-width: 1366px) {
+            display: none;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+
+        @media screen and (min-width: 768px) {
+            padding: 0 20px 20px;
+        }
+
+        // *
+        @media screen and (min-width: 1366px) {
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+        }
+    }
+
+    &__nav {
+        margin-bottom: auto;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #E5E5E5;
+
+        // *
+
+        @media screen and (min-width: 1366px) {
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    &__info-list {
+        margin-top: 15px;
+
+        @media screen and (min-width: 1366px) {
+            margin: 0;
+        }
+    }
+
+    &__options {
+        margin-top: 20px;
+
+        @media screen and (min-width: 1366px) {
+            
+            position: fixed;
+            overflow: hidden;
+            left: 0;
+            top: 0;
+            width: 86px;
+            height: 100%;
+            margin: 0;
+            padding-top: 86px;
+            display: block;
+
+        }
+    }
+
+    &__logo {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+// nav.scss
+
+// Nav
+
+.nav {
+
+
+    &__list {
+        
+        .header & {
+            // *
+
+
+            
+
+        }
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    &__button {
+        flex: 0 0 auto;
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin: 0 0 0 10px;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: #F3F7FA;
+        cursor: pointer;
+
+        &--m-hidden {
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        display: block;
+        width: 12px;
+        height: 8px;
+        fill: none;
+        stroke:#3166B4;
+        transition: transform .2s;
+
+        .nav__button--active & {
+            transform: translate(-50%,-50%) rotate(-180deg);
+        }
+    }
+
+    &__link {
+        flex: 0 0 auto;
+        display: block;
+        line-height: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+    }
+
+    &__body {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+
+        &--m-visible {
+            @media screen and (min-width: 768px) {
+                display: block;
+            }
+        }
+    }
+
+    &__sub-link {
+        display: block;
+        padding: 5px 0;
+        line-height: 20px;
+        color: #363636;
+    }
+}

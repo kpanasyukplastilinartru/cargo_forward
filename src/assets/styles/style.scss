@@ -1,0 +1,34 @@
+// style.scss
+
+// Style
+
+// Common
+
+@import './fonts.scss';
+@import './reset.scss';
+
+// Blocks
+
+@import './blocks/body.scss';
+@import './blocks/page.scss';
+@import './blocks/grid.scss';
+
+// Header
+
+@import './blocks/header.scss';
+@import './blocks/logo.scss';
+@import './blocks/menu.scss';
+@import './blocks/icon.scss';
+@import './blocks/nav.scss';
+
+@import './blocks/info-list.scss';
+@import './blocks/info.scss';
+
+@import './blocks/options.scss';
+@import './blocks/button.scss';
+
+@import './blocks/search.scss';
+
+// Footer
+
+@import './blocks/footer.scss';

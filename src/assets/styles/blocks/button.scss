@@ -1,0 +1,45 @@
+// button.scss
+
+// Button
+
+.button {
+    border: 1px solid #3166B4;
+
+    &--regular {
+        background: #3166B4;
+        color: #FFF;
+    }
+
+    &--special {
+        background: #FFF;
+        color: #3166B4;
+    }
+
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: 1366px) {
+        transition: border-color .2s, background-color .2s, color .2s;
+    }
+
+    &:hover {
+        @media screen and (min-width: 1366px) {
+            background: #29A1F4;
+            border-color: #29A1F4;
+            color: #FFF;
+        }
+    }
+
+    &:active {
+        background: #004486;
+        border-color: #004486;
+        color: #FFF;
+    }
+
+    &:disabled {
+        background: #848484;
+        border-color: #848484;
+        color: #FFF;
+    }
+}

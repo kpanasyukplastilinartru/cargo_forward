@@ -1,0 +1,47 @@
+// page.scss
+
+// Page
+
+.page {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+    }
+
+    &__main {
+        flex: 1 1 auto;
+    }
+
+    &__footer {
+        margin-top: auto;
+    }
+
+    &__container {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        @media screen and (min-width: 768px) {
+            max-width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+
+        @media screen and (min-width: 1366px) {
+            max-width: 1120px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        @media screen and (min-width: 1920px) {
+            max-width: 1520px;
+        }
+    }
+}

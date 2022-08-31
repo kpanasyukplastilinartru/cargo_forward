@@ -1,0 +1,27 @@
+// fonts.scss
+
+// Fonts
+
+// Roboto
+
+// Roboto Regular
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./../fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+        url('./../fonts/Roboto/Roboto-Regular.woff') format('woff');
+}
+
+// Roboto Bold
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./../fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+        url('./../fonts/Roboto/Roboto-Bold.woff') format('woff');
+}

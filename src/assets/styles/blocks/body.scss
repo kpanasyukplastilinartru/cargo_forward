@@ -1,0 +1,26 @@
+// body.scss
+
+// Body
+
+.body {
+    font: normal normal 400 16px/1 'Roboto', sans-serif;
+    color: #000;
+
+    &--locked {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__page {
+        min-height: 100%;
+        padding-top: 100px;
+
+        @media screen and (min-width: 768px) {
+            padding-top: 50px;
+        }
+
+        @media screen and (min-width: 1366px) {
+            padding-top: 86px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+// info.scss
+
+// Info
+
+.info {
+
+    &__title {
+        line-height: 16px;
+        font-size: 14px;
+        color: #363636;
+    }
+
+    &__content {
+        margin-top: 1px;
+    }
+
+    &__link,
+    &__button {
+        margin: 0;
+        padding: 0;
+        line-height: 18px;
+        color: #3166B4;
+    }
+
+    &__button {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: none;
+        cursor: pointer;
+    }
+}

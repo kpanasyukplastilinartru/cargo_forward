@@ -1,0 +1,413 @@
+@@include('./templates/main-header.html', { 'lang': 'ru', 'title': 'Cargo Forward' })
+
+<!-- Page -->
+<div class="body__page page">
+
+    <!-- Header -->
+    <header class="page__header header">
+        <div class="header__container">
+
+
+            
+            <!-- Header Section -->
+            <div class="header__section">
+
+                <!-- Header Logo -->
+                <div class="header__logo logo">
+                    <a class="logo__link" href="/">
+
+                        <!-- Logo Picture Mobile -->
+                        <span class="logo__picture logo__picture--mobile">
+                            <img src="./assets/images/content/img_logo_mobile.png" alt="">
+                        </span>
+                        <!-- / Logo Picture Mobile -->
+
+                        <!-- Logo Picture Desktop -->
+                        <span class="logo__picture logo__picture--desktop">
+                            <img src="./assets/images/content/img_logo_desktop.png" alt="">
+                        </span>
+                        <!-- Logo Picture Desktop -->
+
+                    </a>
+                </div>
+                <!-- / Header Logo -->
+
+                <!-- Header Link -->
+                <a class="header__link link" href="#">
+                    info@cargo-forward.ru
+                </a>
+                <!-- / Header Link -->
+
+                <!-- Header Search -->
+                <form class="header__search search js-search" action="" method="POST">
+
+                    <div class="search__box">
+
+                        <div class="search__field">
+                            <input class="search__input" type="text" placeholder="Поиск по сайту">
+                        </div>
+
+                        <button class="search__button search__button--submit js-search__button--submit" type="button">
+                            <span class="search__button-box">
+                                <svg class="search__button-icon search__button-icon--submit">
+                                    <use href="./assets/images/svg-sprite/svg-sprite.svg#search"></use>
+                                </svg>
+                            </span>
+                        </button>
+
+                        <button class="search__button search__button--reset js-search__button--reset" type="reset">
+                            <span class="search__button-box">
+                                <svg class="search__button-icon search__button-icon--reset">
+                                    <use href="./assets/images/svg-sprite/svg-sprite.svg#cross"></use>
+                                </svg>
+                            </span>
+                        </button>
+
+                    </div>
+
+                </form> 
+                <!-- / Header Search -->
+
+                <!-- Header Menu -->
+                <div class="header__menu menu js-menu">
+
+                    <!-- Menu Button -->
+                    <button class="menu__button menu__button--open js-menu__button" type="button">
+                        <span class="menu__button-box">
+                            <span class="menu__button-line"></span>
+                        </span>
+                    </button>
+                    <!-- / Menu Button -->
+
+                    <!-- Menu Block -->
+                    <div class="menu__block js-menu__block">
+                        <div class="menu__content js-menu__content">
+
+                            <!-- Menu Head -->
+                            <div class="menu__head">
+                                <!-- Menu Logo -->
+                                <div class="menu__logo logo">
+                                    <a class="logo__link" href="/">
+                                        <span class="logo__picture">
+                                            <img src="./assets/images/content/img_logo_mobile.png" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                                <!-- / Menu Logo -->
+                                <!-- Menu Button -->
+                                <button class="menu__button menu__button--close js-menu__button" type="button">
+                                    <span class="menu__button-box">
+                                        <span class="menu__button-line"></span>
+                                    </span>
+                                </button>
+                                <!-- / Menu Button -->
+                            </div>
+                            <!-- / Menu Head -->
+
+                            <!-- Menu Body -->
+                            <div class="menu__body">
+                                <!-- Nav -->
+                                <nav class="menu__nav nav js-nav">
+                                    <ul class="nav__list">
+                                        <li class="nav__item js-nav__item">
+                                            <div class="nav__head">
+                                                <a class="nav__link" href="#">Каталог услуг</a>
+                                                <button class="nav__button js-nav__button" type="button">
+                                                    <svg class="nav__icon">
+                                                        <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-small-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="nav__body js-nav__body">
+                                                <ul class="nav__sub-list">
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">Описание деятельности</a></li>
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">География грузоперевозок</a></li>
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">Информация для клиентов</a></li>
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">Контактная информация</a></li>
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">Новости</a></li>
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">Статьи</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav__item js-nav__item">
+                                            <div class="nav__head">
+                                                <a class="nav__link" href="#">География перевозок</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav__item js-nav__item">
+                                            <div class="nav__head">
+                                                <a class="nav__link" href="#">О нас</a>
+                                                <button class="nav__button js-nav__button" type="button">
+                                                    <svg class="nav__icon">
+                                                        <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-small-down"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="nav__body js-nav__body">
+                                                <ul class="nav__sub-list">
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">Описание деятельности</a></li>
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">География грузоперевозок</a></li>
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">Информация для клиентов</a></li>
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">Контактная информация</a></li>
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">Новости</a></li>
+                                                    <li class="nav__sub-item"><a class="nav__sub-link" href="#">Статьи</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav__item js-nav__item">
+                                            <div class="nav__head">
+                                                <a class="nav__link" href="#">Контакты</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- / Nav -->
+                                <!-- Info List -->
+                                <ul class="menu__info-list info-list">
+                                    <li class="info-list__item info">
+                                        <p class="info__title">Email</p>
+                                        <div class="info__content">
+                                            <a class="info__link" href="mailto:info@cargo-forward.ru">info@cargo-forward.ru</a>
+                                        </div>
+                                    </li>
+                                    <li class="info-list__item info">
+                                        <p class="info__title">Обратная связь</p>
+                                        <div class="info__content">
+                                            <button class="info__button" type="button">Заказать звонок</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- / Info List -->
+                                <!-- Options -->
+                                <div class="page__options menu__options options">
+                                    <button class="options__option options__option--regular" type="button">
+                                        <span class="options__box">
+                                            <svg class="options__icon options__icon--calculator">
+                                                <use href="./assets/images/svg-sprite/svg-sprite.svg#calculator"></use>
+                                            </svg>
+                                            <span class="options__text">Рассчитать стоимость</span>
+                                        </span>
+                                    </button>
+                                    <button class="options__option options__option--special" type="button">
+                                        <span class="options__box">
+                                            <span class="options__icon">
+                                                <svg class="options__icon options__icon--document">
+                                                    <use href="./assets/images/svg-sprite/svg-sprite.svg#document"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="options__text">Прайс-лист</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <!-- / Options -->
+                            </div>
+                            <!-- / Menu Body -->
+
+
+                        </div>
+                    </div>
+                    <!-- / Menu Block -->
+                </div>
+                <!-- / Header Menu -->
+
+            </div>
+            <!-- / Header Section -->
+
+            <!-- Header Bricks -->
+            <div class="header__bricks">
+                <a class="header__brick" href="tel:+74993908377">
+                    <svg class="header__brick-icon">
+                        <use href="./assets/images/svg-sprite/svg-sprite.svg#phone"></use>
+                    </svg>
+                    <span class="header__brick-text">
+                        +7 (499) 390-83-77
+                    </span>
+                </a>
+                <a class="header__brick" href="tel:+79258697909">
+                    <svg class="header__brick-icon">
+                        <use href="./assets/images/svg-sprite/svg-sprite.svg#phone"></use>
+                    </svg>
+                    <span class="header__brick-text">
+                        +7 (925) 869-79-09
+                    </span>
+                </a>
+            </div>
+            <!-- / Header Bricks -->
+
+        </div>
+    </header>
+    <!-- / Header -->
+
+    <!-- Main -->
+    <main class="page__main main">
+        <div class="page__container">
+
+
+            <!-- <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p> -->
+            
+        </div>
+    </main>
+    <!-- / Main -->
+
+    <!-- Footer -->
+    <footer class="page__footer footer">
+        <div class="page__container grid">
+            <div class="grid__row grid__row--xs-1 grid__row--m-3">
+
+                <div class="footer__navigation grid__col">
+                    <div class="nav js-nav">
+                        <ul class="nav__list">
+                            <li class="nav__item js-nav__item">
+                                <div class="nav__head">
+                                    <a class="nav__link" href="#">Услуги</a>
+                                    <button class="nav__button nav__button--m-hidden js-nav__button" type="button">
+                                        <svg class="nav__icon">
+                                            <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-small-down"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="nav__body nav__body--m-visible grid js-nav__body">
+                                    <div class="grid__row grid__row--xs-1 grid__row--xxl-2">
+                                        <div class="grid__col">
+                                            <ul class="nav__sub-list">
+                                                <li class="nav__sub-item"><a class="nav__sub-link" href="#">Грузоперевозки по России</a></li>
+                                                <li class="nav__sub-item"><a class="nav__sub-link" href="#">Грузоперевозки по Москве и Московской области</a></li>
+                                                <li class="nav__sub-item"><a class="nav__sub-link" href="#">Перевозка сыпучих грузов</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="grid__col">
+                                            <ul class="nav__sub-list">
+                                                <li class="nav__sub-item"><a class="nav__sub-link" href="#">Аренда спецтехники</a></li>
+                                                <li class="nav__sub-item"><a class="nav__sub-link" href="#">Страхование</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__navigation grid__col">
+                    <nav class="nav js-nav">
+                        <ul class="nav__list">
+                            <li class="nav__item js-nav__item">
+                                <div class="nav__head">
+                                    <a class="nav__link" href="#">О компании</a>
+                                    <button class="nav__button nav__button--m-hidden js-nav__button" type="button">
+                                        <svg class="nav__icon">
+                                            <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-small-down"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="nav__body nav__body--m-visible grid js-nav__body">
+                                    <div class="grid__row grid__row--xs-1 grid__row--xxl-2">
+                                        <div class="grid__col">
+                                            <ul class="nav__sub-list">
+                                                <li class="nav__sub-item"><a class="nav__sub-link" href="#">Описание деятельности</a></li>
+                                                <li class="nav__sub-item"><a class="nav__sub-link" href="#">География грузоперевозок</a></li>
+                                                <li class="nav__sub-item"><a class="nav__sub-link" href="#">Информация для клиентов</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="grid__col">
+                                            <ul class="nav__sub-list">
+                                                <li class="nav__sub-item"><a class="nav__sub-link" href="#">Контактная информация</a></li>
+                                                <li class="nav__sub-item"><a class="nav__sub-link" href="#">Новости</a></li>
+                                                <li class="nav__sub-item"><a class="nav__sub-link" href="#">Статьи</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__information grid__col">
+                    <p class="footer__logo logo">
+                        <a class="logo__link" href="/">
+                            <img src="./assets/images/content/img_logo.png" alt="">
+                        </a>
+                    </p>
+                    <p class="footer__text footer__text--copy">© 2007-2022 «Cargo-forward.ru» все права защищены</p>
+                    <p class="footer__text footer__text--info">Разработано: <a href="#">Plastilin art</a></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- / Footer -->
+
+</div>
+<!-- / Page -->
+
+@@include('./templates/main-footer.html')
